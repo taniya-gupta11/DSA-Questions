@@ -1,0 +1,73 @@
+
+//BinarySearch
+#include <iostream>
+using namespace std;
+int binarySearch(int arr[],int n,int key){
+    int s = 0;
+    int e = n-1;
+    int mid = s + (e-s)/2;
+    
+    while(s<=e){
+        if(arr[mid] == key){
+            return mid;
+        }
+        if(key>arr[mid]){
+            s = mid+1;
+        }
+        else{
+            e = mid-1;
+        }
+        mid = s+(e-s)/2;
+    }
+    return -1;
+}
+
+int main() {
+    int arr[6] = {2,4,6,8,12,18};
+  //  int n = 8;
+  //  int key = 2;
+    int index = binarySearch(arr,6,18);
+   
+        cout<<"index of 18 is: "<<index<<" ";
+
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+bool linearSearch(int arr[], int n, int key) {
+    int i = 0;
+    while (i < n) {
+        if (arr[i] == key) {
+            return true;
+        }
+        i++;
+    }
+    return false;
+}
+
+int main() {
+    int arr[] = {2, 3, 4, 6, 1};
+    int n = 5;
+    int key = 8;
+    
+    bool ans = linearSearch(arr, n, key);
+    
+    if (ans) {
+        cout << "present";
+    } else {
+        cout << "absent";
+    }
+    
+    return 0;
+}

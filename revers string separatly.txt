@@ -1,0 +1,42 @@
+//revers all string
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+   char s[] = "Niel";
+   int len = 0;
+   char temp=0;
+   while(s[len]!='\0'){
+       len++;
+   }
+   cout<<("the length of string is:")<<len<<"\n";
+   for(int i=0; i<(len-1)/2; i++){
+       temp = s[i];
+       s[i]=s[len-1-i];
+       s[len-1-i]=temp;
+   }
+   cout<<("String is:")<<s<<" ";
+   
+   return 0;
+}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
